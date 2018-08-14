@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Heralb {
 	public static void main(String[] argos) {
+
+		nine();
 		Scanner myVar = new Scanner(System.in);
 		System.out.println(myVar.nextLine());
 		System.out.println("Kaaaachow");
@@ -24,4 +26,20 @@ public class Heralb {
 			System.out.println("damn guess ill die");
 		}
 	}
-}
+
+			
+			
+		static void sayhello()
+			{System.out.println("yeet");
+			}
+		public static void nine()
+		{
+			sayhello();
+			sayhello();
+			sayhello();
+		}
+			
+				}
+			
+		
+	

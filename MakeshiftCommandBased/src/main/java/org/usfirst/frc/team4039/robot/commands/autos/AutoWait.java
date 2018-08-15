@@ -7,7 +7,10 @@
 
 package org.usfirst.frc.team4039.robot.commands.autos;
 
+import edu.wpi.first.wpilibj.DriverStation;
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class AutoWait extends Command {
   Command commandToRun;
@@ -35,7 +38,7 @@ public class AutoWait extends Command {
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
-    return t.get() > SmartDashboard.getInstance().getDouble("Auto Delay");
+    return t.get() > SmartDashboard.getNumber("Auto Delay", 0.0);
   }
 
   // Called once after isFinished returns true

@@ -35,7 +35,7 @@ public class Drive extends Subsystem {
 	public boolean driveForwardIsFinished() {
 		return otherMagic();
 	}
-	
+
 	public void setShift(boolean doShift) {
 		this.doShift = doShift;
 	}
@@ -58,10 +58,10 @@ public class Drive extends Subsystem {
 			right.set(ControlMode.PercentOutput, forward - turn);
 		} else if(DriverStation.getInstance().isAutonomous()) {
 			// Auto mode
-			magic();
+			magic(distanceToDrive);
 		} else {
-			left.set(0.0);
-			right.set(0.0);
+			left.set(ControlMode.PercentOutput, 0.0);
+			right.set(ControlMode.PercentOutput, 0.0);
 		}
 		
 		leftFollower.follow(left);

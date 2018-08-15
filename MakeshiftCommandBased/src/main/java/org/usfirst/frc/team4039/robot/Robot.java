@@ -12,6 +12,7 @@ import org.usfirst.frc.team4039.robot.subsystems.Conveyor;
 import org.usfirst.frc.team4039.robot.subsystems.Drive;
 import org.usfirst.frc.team4039.robot.subsystems.IntakeJaws;
 import org.usfirst.frc.team4039.robot.subsystems.IntakeRollers;
+import org.usfirst.frc.team4039.robot.subsystems.Stretch;
 import org.usfirst.frc.team4039.robot.subsystems.Tilt;
 
 import edu.wpi.first.wpilibj.TimedRobot;
@@ -34,6 +35,7 @@ public class Robot extends TimedRobot {
 	public static IntakeJaws intakeJaws;
 	public static IntakeRollers intakeRollers;
 	public static Tilt tilt;
+	public static Stretch stretch;
 	
 	public static OI oi;
 
@@ -52,6 +54,7 @@ public class Robot extends TimedRobot {
 		intakeJaws = new IntakeJaws();
 		intakeRollers = new IntakeRollers();
 		tilt = new Tilt();
+		stretch = new Stretch();
 		
 		oi = new OI();
 

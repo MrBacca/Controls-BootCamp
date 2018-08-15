@@ -7,6 +7,10 @@
 
 package org.usfirst.frc.team4039.robot.commands.autos;
 
+import org.usfirst.frc.team4039.robot.commands.blues.RunBlues;
+import org.usfirst.frc.team4039.robot.commands.conveyor.ConveyorForward;
+import org.usfirst.frc.team4039.robot.commands.drive.DriveForward;
+
 import edu.wpi.first.wpilibj.command.CommandGroup;
 
 public class DriveForwardCube extends CommandGroup {

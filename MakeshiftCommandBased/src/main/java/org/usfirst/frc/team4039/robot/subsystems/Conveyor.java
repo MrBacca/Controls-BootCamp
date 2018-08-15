@@ -18,10 +18,12 @@ public class Conveyor extends Subsystem {
 	}
 	
 	private TalonSRX motor = new TalonSRX(RobotMap.conveyor);
+	private TalonSRX stretchSpin = new TalonSRX(RobotMap.stretchSpin);
 	
 	@Override
 	public void periodic() {
 		motor.set(ControlMode.PercentOutput, speed);
+		stretchSpin.follow(motor);
 	}
 
 	@Override

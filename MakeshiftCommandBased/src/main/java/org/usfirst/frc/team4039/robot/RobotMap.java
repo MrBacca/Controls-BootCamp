@@ -23,7 +23,9 @@ public class RobotMap {
 	public static int intakeRollerFollower = 6;
 	public static int conveyor = 7;
 	public static int blue = 8;
-	public static int blueFollower = 8;
+	public static int blueFollower = 9;
+	public static int stretchSpin = 10;
+	public static int stretchLift = 42;
 	
 	// PCM ports
 	public static int driveShiftForward = 0;

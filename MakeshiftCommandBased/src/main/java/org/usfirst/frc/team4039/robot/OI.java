@@ -15,6 +15,7 @@ import org.usfirst.frc.team4039.robot.commands.intakejaws.JawsClose;
 import org.usfirst.frc.team4039.robot.commands.intakejaws.JawsOpen;
 import org.usfirst.frc.team4039.robot.commands.rollers.RollersIn;
 import org.usfirst.frc.team4039.robot.commands.rollers.RollersOut;
+import org.usfirst.frc.team4039.robot.commands.stretch.StretchLift;
 import org.usfirst.frc.team4039.robot.commands.tilt.TiltDown;
 import org.usfirst.frc.team4039.robot.commands.tilt.TiltUp;
 
@@ -46,7 +47,8 @@ public class OI {
 	Button tiltDown = new JoystickButton(operator, 5);
 	Button conveyorForward = new JoystickButton(operator, 6);
 	Button conveyorBackward = new JoystickButton(operator, 7);
-	Button runBlues = new JoystickButton(operator, 8);
+	Button runBlues = new JoystickButton(operator, 9);
+	Button startButton = new JoystickButton(operator, 8);
 	
 	OI() {
 		shifter.whileHeld(new Shift());
@@ -59,6 +61,7 @@ public class OI {
 		conveyorForward.whileHeld(new ConveyorForward());
 		conveyorBackward.whileHeld(new ConveyorBackward());
 		runBlues.whileHeld(new RunBlues());
+		startButton.whenPressed(new StretchLift());
 	}
 	
 	public void periodic() {
